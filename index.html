@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nord">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href='src/output.css'>
+    <script src='js/index.js'></script>
+</head>
+<body>
+    <form>
+    <div class='flex justify-center'>
+        <h1 class=''>Besseres Absenz Formular</h1>
+    </div>
+    <div class='flex flex-col justify-center gap-10 mx-20'>
+
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Anrede *</span>
+
+            </div>
+        <div>
+        <select class='select invalid:select-error select-primary w-full max-w-xs'>
+            <option disabled selected>Anrede...</option>
+            <option>Herr</option>
+            <option>Frau</option>
+        </select>
+        </div>
+        </label>
+
+        <label data-tip='TESt' class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Name *</span>
+
+            </div>
+            <div >
+            <input required='required'  data-tip='' type="text" placeholder="Name. . ." class="input invalid:input-error input-primary w-full max-w-xs" />
+            </div>
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Nachname *</span>
+
+            </div>
+            <input type="text" required='required' placeholder="Nachname. . ." class="input invalid:input-error input-primary w-full max-w-xs" />
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Email *</span>
+
+            </div>
+            <input type="email" required='required' placeholder="Beispiel@bzz.ch" class="input invalid:input-error input-primary w-full max-w-xs" />
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Telefonnummer (Mobile) *</span>
+
+            </div>
+            <input type="tel" required='required' pattern='[+ 0-9]{10}' placeholder="0000000000" class="input invalid:input-error input-primary w-full max-w-xs" />
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Klasse *</span>
+
+            </div>
+        <select class='select invalid:select-error select-primary w-full max-w-xs'>
+            <option disabled selected>Klasse</option>
+            <option>IM22B</option>
+            <option>IM21A</option>
+            <option>IM21B</option>
+            <option>IM23A</option>
+            <option>IM23B</option>
+            <option>API22A</option>
+            <option>API22B</option>
+        </select>
+
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Lehrberuf *</span>
+
+            </div>
+            <select class='select invalid:select-error select-primary w-full max-w-xs'>
+                <option disabled selected>Lehrberuf</option>
+                <option>Applikationsentwickler</option>
+                <option>Fachfrau Betreuung</option>
+                <option>Mediamatik</option>
+
+            </select>
+
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Standort *</span>
+
+            </div>
+            <select class='select invalid:select-error select-primary w-full max-w-xs'>
+                <option disabled selected>Standort</option>
+                <option>Horgen</option>
+                <option>Stäfa</option>
+
+
+            </select>
+
+        </label>
+        <div class='flex flex-row'>
+            <label class="form-control w-full max-w-xs mr-20">
+                <div class="label">
+                    <span class="label-text font-extrabold">Abwesenheitsbeginn *</span>
+
+                </div>
+                <input type='date' id='userdate' onchange='TDate()' class='input invalid:input-error input-primary w-full max-w-xs'>
+
+            </label>
+            <label class="form-control w-full max-w-xs">
+                <div class="label">
+                    <span class="label-text font-extrabold">Abwesenheitsende *</span>
+
+                </div>
+                <input type='date' class='input invalid:input-error input-primary w-full max-w-xs'>
+            </label>
+
+            </label>
+
+
+        </div>
+
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Grund der Abwesenheit *</span>
+
+            </div>
+            <textarea cols='20' required='required' placeholder="Begründung. . . " class="textarea invalid:textarea-error textarea-primary w-full max-w-xs"></textarea>
+            <div class="label">
+
+            </div>
+        </label>
+
+        <label data-tip='TESt' class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Anzahl betroffene Lektionen *</span>
+
+            </div>
+            <div >
+                <input required='required' type="number" placeholder="Anzahl betroffene Lektionen. . ." class="input invalid:input-error input-primary w-full max-w-xs" />
+            </div>
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text">Anhänge</span>
+
+            </div>
+            <input type="file" class="file-input file-input-secondary w-full max-w-xs" />
+            <div class="label">
+
+            </div>
+        </label>
+        <label class="form-control w-full max-w-xs">
+            <div class="label">
+                <span class="label-text font-extrabold">Betroffene Lehrpersonen *</span>
+            </div>
+            <select multiple class='rounded-xl select invalid:select-error select-primary w-full max-w-xs'>trest
+                <option>Jhon Doe</option>
+                <option>Barack Obama</option>
+                <option>Osama Bin Laden</option>
+                <option>Willy Wonka</option>
+                <option>Saddam Hussein</option>
+            </select>
+
+        </label>
+        <div class='flex flex-row'>
+            <label class="label cursor-pointer">
+                <span class="label-text font-bold mr-2">Der Lehrbetrieb ist informiert und ist einverstanden.</span>
+                <input type="checkbox"  class="checkbox checkbox-primary" />
+            </label>
+            <div class='align-bottom'></div>
+        </div>
+        <div class='flex flex-row'>
+            <label class="label cursor-pointer">
+                <span class="label-text font-bold mr-2">Bei Minderjährigen: Inhaber der elterlichen Sorge sind informiert und einverstanden.</span>
+                <input type="checkbox"  class="checkbox checkbox-primary" />
+            </label>
+            <div class='align-bottom'></div>
+        </div>
+            <button type='submit' class='btn btn-primary mb-10'>Gesuch einreichen</button>
+    </div>
+
+    </form>
+    <script>function TDate() {
+        var UserDate = document.getElementById("userdate").value;
+        var ToDate = new Date();
+
+        if (new Date(UserDate).getTime() <= ToDate.getTime()) {
+            alert("The Date must be Bigger or Equal to today date");
+            return false;
+        }
+        return true;
+    }</script>
+</body>
+</html>
