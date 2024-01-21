@@ -11,7 +11,7 @@
     <div class='flex justify-center'>
         <h1 class=''>Besseres Absenz Formular</h1>
     </div>
-    <div class='flex flex-col justify-center gap-10 mx-20'>
+    <div class='flex flex-col justify-center items-center gap-10 mx-20'>
 
         <label class="form-control w-full max-w-xs">
             <div class="label">
@@ -171,7 +171,7 @@
         </label>
         <label class="form-control w-full max-w-xs">
             <div class="label">
-                <span class="label-text font-extrabold">Betroffene Lehrpersonen *</span>
+                <span class="label-text font-extrabold">Betroffene Lehrpersonen * (Mehrere anwählbar mit CTRL)</span>
             </div>
             <select multiple class='rounded-xl select invalid:select-error select-primary w-full max-w-xs'>trest
                 <option>Jhon Doe</option>
@@ -205,7 +205,7 @@
         var ToDate = new Date();
 
         if (new Date(UserDate).getTime() <= ToDate.getTime()) {
-            alert("The Date must be Bigger or Equal to today date");
+            alert("Das angegebene Datum muss dem heutigen gleich oder grösser sein");
             return false;
         }
         return true;
